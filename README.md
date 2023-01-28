@@ -1,7 +1,6 @@
 <h1>Decoder Ring Capstone Project</h1>
 
 This is the code and accompanying tests for the Decoder Ring capstone project that includes the Caesers Cipher, Substitution Cipher and Polybius Cipher
-<br></br>
 
 <h2>Installation Instructions</h2>
 
@@ -16,7 +15,6 @@ To install this repository:
 `npm start` will open a webpage letting you access each of the different ciphers to be able to encode and decode messages
 
 ---
-<br>
 
 <h2>Description</h2>
 
