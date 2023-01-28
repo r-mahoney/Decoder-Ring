@@ -12,24 +12,37 @@ const polybiusModule = (function () {
 
 
     if (encode) {
+      //if were encoding then we split the input into an uppercase array
+      //we do toUpperCase because i wrote the switch/cases in uppercase before writing the code and didnt want to change 52 cases
       let inputArr = input.toUpperCase().split("");
       for (char of inputArr) {
+        //for each element(character) in the inputArray, run it through the encodeSwitch function to push each matching number to
+        //the output array
         encodeSwitch(char, output)
       }
     } else {
+      //if the input after you split by any spaces and join back together does not have a length divisible by 2 then your 
+      //input is incorrect and we retun false
       if(input.split(" ").join("").length %2 !== 0) return false
       let regex = /([0-9][0-9])/;
+      //if were decoding first we need to split the numbers in the input into pairs
+      //this regex checks for a group where a number is followed by a number
       let inputArr = input.split(regex).filter(result => (result !== ""))
+      //split the inputArr by the regex and then filter by any result that isnt "" otherwise you have an array that includes empty strings
+      //this leaves you with an array of pairs of numbers and any spaces or special characters
       
       for (char of inputArr) {
+        //for each pair of numbers in inputArr, we run it through the decode switch/case to get corresponding letters
         decodeSwitch(char, output)
       }
     }
-    return (output.join("").toLowerCase()) 
+    return (output.join("").toLowerCase())
+    //join the output array and the return it to lower case letter to match the test styling
   }
 
 
   function encodeSwitch(char, arrToPushTo) {
+    //switch/case for encoding matching Letters in the user input to the corresponding 2 numbers
     switch (char) {
       case "A":
         arrToPushTo.push("11");
@@ -56,6 +69,7 @@ const polybiusModule = (function () {
         arrToPushTo.push("32");
         break;
       case "I": case "J":
+        //case for i and j both resolve to 42
         arrToPushTo.push("42");
         break;
       case "K":
@@ -107,11 +121,13 @@ const polybiusModule = (function () {
         arrToPushTo.push("55");
         break;
       default:
+      //default case pushes anything that isnt a letter in the alphabet to keep spaces and special characters
         arrToPushTo.push(char)
     }
   }
 
   function decodeSwitch(char, arrToPushTo) {
+    //switch/case for decoding. Cases are the 2 digits that match to each of the 26 letters
     switch (char) {
       case "11":
         arrToPushTo.push("A");
@@ -138,6 +154,7 @@ const polybiusModule = (function () {
         arrToPushTo.push("H");
         break;
       case "42":
+      //since i/j both resolve to 42, we push (I and J)
         arrToPushTo.push("(I/J)");
         break;
       case "52":
@@ -189,6 +206,7 @@ const polybiusModule = (function () {
         arrToPushTo.push("Z");
         break;
       default:
+      //default to push any character that isnt a specified number to keep spaces and special characters
         arrToPushTo.push(char)
     }
   }
