@@ -14,7 +14,7 @@ To install this repository:
 
 `npm start` will open a webpage letting you access each of the different ciphers to be able to encode and decode messages
 
----
+
 
 <h2>Description</h2>
 
