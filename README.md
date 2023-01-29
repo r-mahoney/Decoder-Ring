@@ -24,6 +24,7 @@ To install this repository:
 
 The Caesar Shift is a type of substitution cipher that relies on taking the alphabet and "shifting" letters to the right or left bades on the value of the inputted shift. A negative shift will shift the alphabet to the right and positive will shift it to the left. Encoding a message will scramble the users inputted message using a shifted alphabet as reference. Decoding will unscramble the message as long as the user knows the same shift that was used to encode the message.
 <br>
+
 ![Ceasers shift image](/images/ceasers.png)
 
 <br>
@@ -41,6 +42,8 @@ The Polybius Square is a cipher that is achieved by arranging a typical alphabet
 
 The Substitution Cipher uses a standard alphabet as a reference and a user inputted substitution alphabet. Letters from the substitution alphabet will be transposed to the standard alphabet like so:
 <br>
+
 ![Substitution Cipher](/images/subs.png)
+
 <br>
 The user inputted alphabet must be exactly 26 characters long and include all unique characters.
