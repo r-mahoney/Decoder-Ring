@@ -22,7 +22,7 @@ To install this repository:
 
 <h3>Caeser's Shift</h3>
 
-The Caesar Shift is a type of substitution cipher that relies on taking the alphabet and "shifting" letters to the right or left bades on the value of the inputted shift. A negative shift will shift the alphabet to the right and positive will shift it to the left. Encoding a message will scramble the users inputted message using a shifted alphabet as reference. Decoding will unscramble the message as long as the user knows the same shift that was used to encode the message.
+The Caesar Shift is a type of substitution cipher that relies on taking the alphabet and "shifting" letters to the right or left based on the value of the inputted shift. A negative shift will shift the alphabet to the right and positive will shift it to the left. Encoding a message will scramble the users inputted message using a shifted alphabet as reference. Decoding will unscramble the message as long as the user knows the same shift that was used to encode the message.
 <br>
 
 ![Ceasers shift image](/images/ceasers.png)
